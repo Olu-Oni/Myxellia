@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+  /* font-family: system-ui, Avenir, Helvetica, Arial, sans-serif; */
+  font-family: "Euclid Circular B", sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  --muted-color: #b5b4b4;
+  /* color-scheme: light dark; */
+  color: #292929;
+/*
+  background-color: #242424; */
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /* display: flex;
+  place-items: center; */
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: #F5F5F5;
+}
+
+header span button img {
+  width: 32px;
+  height: 32px;
+}
+
+header > nav > a {
+  max-width: 170px;
+  flex:1;
+  justify-content: center;
+}
+nav img {
+  width: 24px;
+  height: 24px;
+}
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+h2 {
+  font-size: 24px;
+  font-weight: 600;
+}
+h3 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+h5{
+  font-size: 14px;
+  color: #3D3D3D;
+  display: inline;
+}
+h6{
+  font-size: 10px;
+  color: #3D3D3D;
+  display: inline;
+}
+
+
+
+
+button.active{
+  background-color: #F5F5F5;
+  border-radius: .5em;
+}
+div#card{
+  background-color: white;
+  border: solid 1px #d8d8d8;
+  border-radius: .5em;
+  overflow: hidden;
+}
+
+div#card >div{
+  padding: 1em;
+  
+}
+
+#cardContent span{
+  display: flex;
+  flex-direction: column;
+  gap: .4em;
+}
+button:hover {
+}
+button:focus,
+button:focus-visible {
+  /* outline: 4px auto -webkit-focus-ring-color; */
+}
+
+
+ 

@@ -4,7 +4,7 @@ import StatisticCard from "./StatisticCard";
 
 const MainCard = () => {
   return (
-    <div id="card" className="basis-[860px] h-[325px] border rounded-md ">
+    <div id="card" className="basis-[860px] min-h-[320px] border rounded-md ">
       <div id="card-header" className="flex flex-col gap-3 !pb-3 border-b">
         <span className="flex justify-between gap-4 ">
           <span>
@@ -24,7 +24,7 @@ const MainCard = () => {
           <button className="font-semibold active">1 Year</button>
         </span>
       </div>
-      <div id="card-content" className="flex flex-wrap gap-2 !pt-3">
+      <div id="card-content" className="flex flex-wrap gap-2 !pt-3 !pb-2">
         <span id="graph" className="flex items-center ">
           <button className=" min-w-[18px] h-[18px] active flex place-content-center">
             <img src={arrow1} />

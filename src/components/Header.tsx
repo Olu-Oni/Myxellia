@@ -35,11 +35,11 @@ const Header = () => {
         </span>
       </div>
       <nav className="flex gap-4 text-[#3D3D3D] h-[67px] items-center px-4 lg:px-16 bg-white">
-        <a className="flex items-center gap-2 font-semibold text-center text-black bg-[#F5F5F5] p-2 rounded-md"><img src={home}/>Dashboard</a>
-        <a className="flex items-center gap-2 text-center"><img src={toolbox}/>Listings</a>
-        <a className="flex items-center gap-2 text-center"><img src={user1}/>Users</a>
-        <a className="flex items-center gap-2 text-center"><img src={article}/>Request</a>
-        <a className="flex items-center gap-2 text-center"><img src={scroll}/>Applications</a>
+        <a className="max-lg:hidden flex items-center gap-2 font-semibold text-center text-black bg-[#F5F5F5] p-2 rounded-md"><img src={home}/>Dashboard</a>
+        <a className="flex items-center gap-2 text-center max-lg:hidden"><img src={toolbox}/>Listings</a>
+        <a className="flex items-center gap-2 text-center max-lg:hidden"><img src={user1}/>Users</a>
+        <a className="flex items-center gap-2 text-center max-lg:hidden"><img src={article}/>Request</a>
+        <a className="flex items-center gap-2 text-center max-lg:hidden"><img src={scroll}/>Applications</a>
         <div className="p-2 rounded-lg bg-[#F5F5F5] flex gap-2 border grow max-w-[320px] ml-auto">
           <img src={search}/> <input className="bg-transparent focus:outline-none " placeholder="Search listings, users here..."/></div>
       </nav>

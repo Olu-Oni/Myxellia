@@ -1,4 +1,3 @@
-import React from "react";
 import {
   BarChart as RechartsBarChart,
   Bar,
@@ -28,7 +27,7 @@ const MyBarChart: React.FC = () => {
 
   return (
     <div className="text-[10px] relative right-2">
-      <ResponsiveContainer width={370} height={180} >
+      <ResponsiveContainer minWidth={370} height={180} >
         <RechartsBarChart data={data} >
           <XAxis dataKey="month" />
           <YAxis

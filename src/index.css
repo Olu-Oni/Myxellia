@@ -39,6 +39,20 @@ header span button img {
   height: 32px;
 }
 
+header {
+  /* height: 150px;
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  z-index: 50;
+  border-bottom:1px solid #858585; */
+  /* border-color: ; */
+}
+main {
+  /* margin-top: 150px; */
+}
+
 header > nav > a {
   max-width: 170px;
   flex:1;
@@ -59,6 +73,9 @@ h2 {
 h3 {
   font-size: 20px;
   font-weight: 600;
+}
+h4 {
+  font-size: 18px;
 }
 
 h5{
@@ -95,6 +112,10 @@ div#card >div{
   display: flex;
   flex-direction: column;
   gap: .4em;
+}
+
+.slider-container{
+  @apply w-[418px] h-[286px] flex justify-center relative rounded-xl overflow-hidden
 }
 button:hover {
 }

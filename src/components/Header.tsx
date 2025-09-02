@@ -9,7 +9,6 @@ import user1 from "../assets/Profile1.svg";
 import article from "../assets/Article.svg";
 import scroll from "../assets/Scroll.svg";
 import search from "../assets/Search 1.svg";
-import type { ModalProps } from "./Modal";
 
 interface HeaderProps {
     setModalOpen: React.Dispatch<React.SetStateAction<boolean>>;

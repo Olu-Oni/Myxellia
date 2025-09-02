@@ -1,4 +1,3 @@
-import arrowCircled from "../assets/arrow-circled.svg";
 
 interface StatisticsValues {
   amountColor?: string;
@@ -14,7 +13,6 @@ const StatisticCard: React.FC<StatisticsValues> = ({
   amount,
   percentageColor,
   percentage,
-  arrowUp,
 }) => {
   const formatNaira = (amt: number) => {
     return new Intl.NumberFormat("en-NG", {

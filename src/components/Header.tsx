@@ -9,21 +9,35 @@ import user1 from "../assets/Profile1.svg";
 import article from "../assets/Article.svg";
 import scroll from "../assets/Scroll.svg";
 import search from "../assets/Search 1.svg";
+import type { ModalProps } from "./Modal";
 
-const Header = () => {
+interface HeaderProps {
+    setModalOpen: React.Dispatch<React.SetStateAction<boolean>>;
+      setCalenderOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  calenderOpen: boolean;
+
+}
+const Header:React.FC<HeaderProps> = ({setModalOpen, setCalenderOpen, calenderOpen}) => {
+    const handleModalClickOpen = () => {
+    setModalOpen(true);
+  };
+
+  const handlecalenderClickOpen = () => {
+    setCalenderOpen(!calenderOpen);
+  };
   return (
     <header className="border-b">
-      <div className="bg-[#191919] text-[#FFFFFF] h-[84px] flex items-center justify-between p-4 lg:px-16">
+      <div className="bg-[#191919] !z-50 text-[#FFFFFF] h-[84px] flex items-center justify-between p-4 lg:px-16">
         <img src={logo} className="h-[26px]" />
 
         <span className="flex gap-7">
           <button disabled>
             <img src={bell} />
           </button>
-          <button className="cursor-pointer">
+          <button onClick={handleModalClickOpen} className="cursor-pointer">
             <img src={calculator} />
           </button>
-          <button className="cursor-pointer">
+          <button  onClick={handlecalenderClickOpen}  className="cursor-pointer">
             <img src={calendar} />
           </button>
           <button disabled>

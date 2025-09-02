@@ -16,7 +16,7 @@ const Dashboard = () => {
         <Slides amt={3}/>
         
       </div>
-      <button className="fixed z-50 bg-[#242526] bottom-20 right-12 w-14 h-14 flex place-content-center rounded-full">
+      <button className="fixed z-20 bg-[#242526] bottom-20 right-12 w-14 h-14 flex place-content-center rounded-full">
         <img width={24} src={messages} />
       </button>
     </main>

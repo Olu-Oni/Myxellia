@@ -1,7 +1,7 @@
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper mmodules
-import { Navigation, Pagination } from "swiper/modules";
+import { Pagination } from "swiper/modules";
 
 import bg1 from "../assets/bg1.jpg";
 import bg2 from "../assets/bg2.jpg";

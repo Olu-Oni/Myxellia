@@ -49,7 +49,7 @@ const SlideCalender: React.FC<SliderProps> = ({ open, setOpen }) => {
     <>
       <aside
         className={`absolute top-[84px] right-0 w-[400px] bg-[#171717]  text-white transform transition-transform duration-300 ease-out z-40 ${
-          open ? "translate-x-0" : "translate-x-full"
+          open ? "block" : "hidden "
         }`}
       >
         <div className="h-[50px] flex justify-between items-center px-6">

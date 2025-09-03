@@ -24,6 +24,10 @@
   -ms-overflow-style: none;  /* Internet Explorer 10+ */
   scrollbar-width: none;  /* Firefox */
 
+  /* Swiper */
+  --swiper-pagination-color: white; /* Active bullet color */
+  --swiper-pagination-bullet-inactive-color: #ffffffbe; /* Inactive bullet color */
+  --swiper-pagination-bullet-inactive-opacity: 0.2;
 }
 
 ::-webkit-scrollbar {

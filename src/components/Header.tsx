@@ -13,6 +13,7 @@ import search from "../assets/Search 1.svg";
 import Tooltip from "@mui/material/Tooltip";
 import { useState } from "react";
 import { Popover, Typography } from "@mui/material";
+import PopoverContent from "./PopoverContent";
 
 interface HeaderProps {
   setModalOpen: React.Dispatch<React.SetStateAction<boolean>>;
@@ -27,7 +28,7 @@ const Header: React.FC<HeaderProps> = ({
 }) => {
   const [anchorEl, setAnchorEl] = useState(null);
 
-  const handleClick = (event:any) => {
+  const handleClick = (event: any) => {
     setAnchorEl(event.currentTarget);
   };
 
@@ -36,7 +37,7 @@ const Header: React.FC<HeaderProps> = ({
   };
 
   const open = Boolean(anchorEl);
-  const id = open ? 'simple-popover' : undefined;
+  const id = open ? "simple-popover" : undefined;
 
   // Modal handlers
   const handleModalClickOpen = () => {
@@ -102,8 +103,8 @@ const Header: React.FC<HeaderProps> = ({
           <Tooltip
             title={
               <div>
-                <h4 className="text-black">Dylan Frank</h4>
-                <p className="text-[#7e7e7e] ">dylanfran96@gmail.com</p>
+                <h4 className="text-black font-euclid">Dylan Frank</h4>
+                <p className="text-[#7e7e7e] font-euclid">dylanfran96@gmail.com</p>
               </div>
             }
             placement="bottom-start"
@@ -111,27 +112,41 @@ const Header: React.FC<HeaderProps> = ({
               tooltip: {
                 sx: {
                   backgroundColor: "#F5F5F5",
-                  
                 },
               },
             }}
           >
-            <button onClick={handleClick} className="w-10 h-10 font-medium text-black bg-white rounded-full text-[23px]">
+            <button
+              onClick={handleClick}
+              className="w-10 h-10 font-medium text-black bg-white rounded-full text-[23px]"
+            >
               D
             </button>
           </Tooltip>
           <Popover
-        id={id}
-        open={open}
-        anchorEl={anchorEl}
-        onClose={handleClose}
-        anchorOrigin={{
-          vertical: 'bottom',
-          horizontal: 'left',
-        }}
-      >
-        <Typography sx={{ p: 2 }}>The content of the Popover.</Typography>
-      </Popover>
+            id={id}
+            open={open}
+            anchorEl={anchorEl}
+            onClose={handleClose}
+            sx={{
+                  marginTop: "10px",
+                  borderRadius: "1em",
+                  
+                  maxWidth: "500px",
+                }}
+            anchorOrigin={{
+              vertical: "bottom",
+              horizontal: "right",
+            }}
+            transformOrigin={{
+              vertical: "top",
+              horizontal: "right",
+            }}
+          >
+            <Typography sx={{ p: 1.5, }}>
+              <PopoverContent />
+            </Typography>
+          </Popover>
         </span>
       </div>
 

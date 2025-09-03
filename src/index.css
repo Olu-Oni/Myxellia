@@ -19,8 +19,20 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  /* Hide scrollbar but keep functionality */
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+
 }
 
+::-webkit-scrollbar {
+  display: none;  /* Safari and Chrome */
+}
+
+/* #root{
+  @apply absolute inset-0 w-dvw
+} */
 * {
   margin: 0;
   padding: 0;
@@ -91,7 +103,6 @@ h6{
 
 
 
-
 button.active{
   background-color: #F5F5F5;
   border-radius: .5em;
@@ -117,12 +128,11 @@ div#card >div{
 .slider-container{
   @apply min-w-[418px] h-[286px] flex justify-center relative rounded-xl overflow-hidden
 }
-button:hover {
-}
-button:focus,
-button:focus-visible {
-  /* outline: 4px auto -webkit-focus-ring-color; */
-}
 
-
- 
+@layer utilities {
+  /* Custom font family utilities */
+  .font-euclid {
+    font-family: "Euclid Circular B", sans-serif;
+  
+  }
+}

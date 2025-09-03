@@ -5,6 +5,7 @@ import Modal from "./components/Modal"
 import SlideCalender from "./components/Calender";
 
 function App() {
+  // states for button actions and component visibilities
 const [modalOpen, setModalOpen] = useState(false);
 const [calenderOpen, setCalenderOpen] = useState(false);
 

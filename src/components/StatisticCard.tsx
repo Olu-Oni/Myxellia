@@ -5,7 +5,7 @@ interface StatisticsValues {
   percentageColor: string;
   percentage: number;
   children: React.ReactNode;
-  arrowUp?: boolean;
+  arrowDown?: boolean;
 }
 const StatisticCard: React.FC<StatisticsValues> = ({
   children,
@@ -13,6 +13,7 @@ const StatisticCard: React.FC<StatisticsValues> = ({
   amount,
   percentageColor,
   percentage,
+  arrowDown,
 }) => {
   const formatNaira = (amt: number) => {
     return new Intl.NumberFormat("en-NG", {
@@ -28,7 +29,7 @@ const StatisticCard: React.FC<StatisticsValues> = ({
       <span className="flex mt-1">
         <h6>{children}</h6>
         <svg
-          className="ml-2 mr-1"
+          className={`ml-2 mr-1 ${arrowDown&&"rotate-180"}`}
           width="12"
           height="12"
           xmlns="http://www.w3.org/2000/svg"

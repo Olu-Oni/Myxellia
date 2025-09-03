@@ -35,19 +35,19 @@ const Slides: React.FC<SlidesProps> = ({ amt }) => {
       loop={true}
       // onSlideChange={() => console.log("slide change")}
       // onSwiper={(swiper) => console.log(swiper)}
-      className="w-[418px] h-[286px] rounded-xl"
+      className="min-w-[418px] flex-1 max-w-[650px]  h-[286px] rounded-xl"
     >
       {slides(amt)?.bg &&
         slides(amt)?.bg?.map((bg) => (
-          <SwiperSlide>
-            <div className="slider-container">
-              <span className="flex flex-col justify-end text-nowrap absolute inset-0   p-4 pb-6 bg-gradient-to-b from-transparent to-[#00000080]">
+          <SwiperSlide className="">
+            <div className=" slider-container">
+              <span className="flex flex-col  justify-end text-nowrap absolute inset-0   p-4 pb-6 bg-gradient-to-b from-transparent to-[#00000080]">
                 <h4 className="text-lg text-white">{slides(amt)?.text}</h4>
                 <h4 className="font-bold text-white ">
                   Urban Prime Plaza Premiere
                 </h4>
               </span>
-              <img src={bg} alt="" />
+              <img src={bg} className="w-full" alt="" />
             </div>
           </SwiperSlide>
         ))}
